@@ -1,0 +1,10 @@
+{
+  "name": "APISec-Py",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postStartCommand": "cd crAPI && docker-compose up -d && sleep 30 && cd .. && python apisec.py --target http://localhost:8888"
+}
