@@ -79,7 +79,7 @@ def check_bola(url, user_a_token=None, user_b_vehicle_id=None):
         except requests.exceptions.RequestException as e:
             print(f"  [ERROR] Vehicle ID {vehicle_id}: {e}")
 
-    # Test 3 — Access another user's profile by ID
+    # Test 3 — Access another user's profile by ID.
     try:
         r3 = requests.get(
             f"{url}/identity/api/v2/user/2",
